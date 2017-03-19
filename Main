@@ -1,0 +1,28 @@
+package pl.uksw.firstproject;
+import java.util.Scanner;
+import  pl.uksw.firstproject.kalkulator;
+
+public class Main {
+	public static void main(String[] args) 
+	  {
+		String tekstUzytkownika;
+		String koniecWprowadzania = "koniec";
+		boolean pom;
+		
+		System.out.println("Menu:");
+		System.out.println("Aby zakonczyc program wpisz \"koniec\".");
+		System.out.print("Wpisz dzialanie:");
+		Scanner keyboard = new Scanner(System.in);
+		tekstUzytkownika = keyboard.nextLine();
+		pom=tekstUzytkownika.equals(koniecWprowadzania);
+		
+		while(!pom)
+		{
+			tekstUzytkownika = keyboard.nextLine();
+			kalkulator.policz(tekstUzytkownika);
+			pom=tekstUzytkownika.equals(koniecWprowadzania);
+		}
+	
+	System.out.println("Koniec programu.");
+	  }
+}
